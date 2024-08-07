@@ -1,5 +1,5 @@
 const dictionary = [
-  // Singular bird names
+  // Singular tree names
   "alder",
   "apple",
   "aspen",
@@ -166,13 +166,13 @@ function handleMouseClick(e) {
 }
 
 function saveSettings() {
-  localStorage.setItem("birdle-nightmode", document.querySelector("body").classList.contains("nightmode") ? '1' : '0')
-  localStorage.setItem("birdle-colorblind", document.querySelector("body").classList.contains("colorblind") ? '1' : '0')
+  localStorage.setItem("treele-nightmode", document.querySelector("body").classList.contains("nightmode") ? '1' : '0')
+  localStorage.setItem("treele-colorblind", document.querySelector("body").classList.contains("colorblind") ? '1' : '0')
 }
 
 function restoreSettings() {
-  const nightmode = parseInt(localStorage.getItem("birdle-nightmode") || '0')
-  const colorblind = parseInt(localStorage.getItem("birdle-colorblind") || '0')
+  const nightmode = parseInt(localStorage.getItem("treele-nightmode") || '0')
+  const colorblind = parseInt(localStorage.getItem("treele-colorblind") || '0')
 
   document.querySelector("body").classList.toggle("nightmode", nightmode)
   document.querySelector("body").classList.toggle("colorblind", colorblind)
@@ -225,7 +225,7 @@ function submitGuess() {
   }, "")
 
   if (!targetWords.includes(guess) && !dictionary.includes(guess)) {
-    showAlert("Not in bird list")
+    showAlert("Not in tree list")
     shakeTiles(activeTiles)
     return
   }
@@ -341,9 +341,9 @@ function createUnicodeGameTranscript() {
   console.assert(accumulator.length === 0)
 
   if (transcript.endsWith(greenSquare+greenSquare+greenSquare+greenSquare+greenSquare)) {
-    return "Birdle #" + (targetWords.indexOf(targetWord) + 1) + " " + usedRows + "/6\n" + transcript
+    return "Treele #" + (targetWords.indexOf(targetWord) + 1) + " " + usedRows + "/6\n" + transcript
   } else {
-    return "Birdle #" + (targetWords.indexOf(targetWord) + 1) + " X/6\n" + transcript
+    return "Treele #" + (targetWords.indexOf(targetWord) + 1) + " X/6\n" + transcript
   }
 }
 
