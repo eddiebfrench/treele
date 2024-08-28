@@ -14,7 +14,7 @@ const dictionary = [
   "caper",
   "carob",
   "cedar",
-  "cireo",
+  "cirio",
   "ebony",
   "elder",
   "erica",
@@ -91,12 +91,15 @@ const targetWords = [
   "ebony",
   "elder",
   "sumac",
-  "cireo",
+  "cirio",
   "cacao",
   "gorse",
   "tuart",
   "matai",
   "osier",
+  "aspen",
+  "shrub",
+  "palms"
 ]
 
 const WORD_LENGTH = 5
